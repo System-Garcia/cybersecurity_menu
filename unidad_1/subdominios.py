@@ -3,7 +3,6 @@ programa para encontrar subdominions de un sitio.
 explicar que hace este script.
 desarrollado por Axel Adrian Garcia Aldama
 '''
-import time
 import requests
 from os import path
 import argparse
