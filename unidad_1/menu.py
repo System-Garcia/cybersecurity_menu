@@ -22,9 +22,11 @@ while True:
         os.system(f'python3 bannergrabing.py -t {target}')
         input("Presiona enter para continuar")
     elif opcion == 3:
-        import wad
+        print("Wad is not still implemented")
     elif opcion == 4:
-        import escaneo_puertos
+        target = input("Ingresa la direccion ip o dominio de la victima: ")
+        os.system(f'python3 port_scanner.py -t {target}')
+        input("Presiona enter para continuar")
     elif opcion == 5:
         target = input("Ingresa el dominio de la victima: ")
         os.system(f'python3 get_ip_2.py -t {target}')

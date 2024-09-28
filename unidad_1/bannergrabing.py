@@ -9,11 +9,14 @@ parse = parse.parse_args()
 def banner(ip, port):
     try:
         s = socket.socket()
+        s.settimeout(2)
         s.connect((ip, port))
-        banner = s.recv(1024)
-        print(f'[+] {ip}:{port} {banner}')
-    except:
+        data = s.recv(1024)
+        print(f'[+] {ip}:{port} {data}')
+    except Exception:
         return
+    finally:
+        s.close()
     
 def main():
     if parse.target:
